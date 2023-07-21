@@ -1,5 +1,16 @@
 import { StyleSheet } from 'react-native'
 
+export const colors = {
+    primary: '#5856D6',
+    secondary: '',
+    success: '',
+    danger: '',
+    warning: '',
+    info: '',
+    light: '',
+    dark: '',
+}
+
 export const appTheme = StyleSheet.create({
     container: {
         marginHorizontal: 20,
@@ -7,6 +18,7 @@ export const appTheme = StyleSheet.create({
     title: {
         fontSize: 30,
         marginBottom: 10,
+        color: 'black',
     },
     button: {
         width: 100,
@@ -24,7 +36,7 @@ export const appTheme = StyleSheet.create({
     },
     avatarContainer: {
         alignItems: 'center',
-        marginTop: 20,
+        marginVertical: 20,
     },
     avatar: {
         height: 100,
@@ -32,10 +44,16 @@ export const appTheme = StyleSheet.create({
         borderRadius: 100,
     },
     menuContainer: {
-        padding: 20,
+        paddingHorizontal: 15,
+        gap: 10,
+    },
+    menuItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
         gap: 10,
     },
     menuTextItem: {
         fontSize: 20,
+        color: 'black',
     },
 })

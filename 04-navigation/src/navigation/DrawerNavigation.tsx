@@ -1,10 +1,11 @@
 import React from 'react'
 import { Image, Text, View, useWindowDimensions } from 'react-native'
 import { DrawerContentComponentProps, DrawerContentScrollView, createDrawerNavigator } from '@react-navigation/drawer'
-import { StackNavigation } from './StackNavigation'
+import { TouchableOpacity } from 'react-native-gesture-handler'
+import Icon from 'react-native-vector-icons/Ionicons'
+import { BottomTabsNavigation } from './BottomTabsNavigation'
 import { SettingsScreen } from '../screens'
 import { appTheme } from '../theme/appTheme'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const Drawer = createDrawerNavigator()
 
@@ -19,7 +20,7 @@ export const DrawerNavigation = () => {
             }}
             drawerContent={DrawerContent}
         >
-            <Drawer.Screen name="StackNavigation" component={StackNavigation} />
+            <Drawer.Screen name="BottomTabsNavigation" component={BottomTabsNavigation} />
             <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
         </Drawer.Navigator>
     )
@@ -38,13 +39,17 @@ const DrawerContent = ({ navigation }: DrawerContentComponentProps) => {
             {/* Menu options */}
             <View style={appTheme.menuContainer}>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('StackNavigation')}
+                    onPress={() => navigation.navigate('BottomTabsNavigation')}
+                    style={appTheme.menuItem}
                 >
-                    <Text style={appTheme.menuTextItem}>Stack navigation</Text>
+                    <Icon name="compass-outline" size={30} color={'black'} />
+                    <Text style={appTheme.menuTextItem}>Bottom tabs navigation</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('SettingsScreen')}
+                    style={appTheme.menuItem}
                 >
+                    <Icon name="settings-outline" size={30} color={'black'} />
                     <Text style={appTheme.menuTextItem}>Settings</Text>
                 </TouchableOpacity>
             </View>

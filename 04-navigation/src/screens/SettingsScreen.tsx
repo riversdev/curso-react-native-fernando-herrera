@@ -8,7 +8,7 @@ export const SettingsScreen = () => {
 
     return (
         <View style={{ ...appTheme.container, marginTop: insets.top }}>
-            <Text style={appTheme.title}>SettingsScreen</Text>
+            <Text style={appTheme.title}>Settings Screen</Text>
         </View>
     )
 }
