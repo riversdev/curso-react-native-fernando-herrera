@@ -1,5 +1,5 @@
-export interface TheMovieDbNowPlaying {
-    dates:         Dates
+export interface TheMovieDbResponse {
+    dates?:         Dates
     page:          number
     results:       Movie[]
     total_pages:   number
