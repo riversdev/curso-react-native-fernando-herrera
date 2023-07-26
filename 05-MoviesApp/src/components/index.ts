@@ -1,3 +1,5 @@
 export * from './MovieCard'
 export * from './MoviesCarousel'
 export * from './HorizontalSlider'
+export * from './MovieDetails'
+export * from './CastItem'
